@@ -23,9 +23,12 @@ export default function Home() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      height: '100vh',
+      width: 500, // Fixed width for the container
+      height: 500, // Fixed height to make it a square box
       backgroundColor: '#f9f4ed', // Background color similar to the image
-      color: '#5b4e4a' // Text color similar to the image
+      borderRadius: 2, // Rounded corners
+      color: '#5b4e4a', // Text color similar to the image
+      mt: 15 // Add a margin at the top to push it down (adjust this value as needed)
     }}>
       <Box sx={{ textAlign: 'center', mb: 4 }}>
         <Box sx={{ mb: 2 }}>

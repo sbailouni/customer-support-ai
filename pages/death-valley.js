@@ -5,6 +5,9 @@ import HikingIcon from '@mui/icons-material/Terrain';
 import CampingIcon from '@mui/icons-material/LocalFireDepartment';
 import WildlifeIcon from '@mui/icons-material/Pets';
 
+
+
+
 const DeathValleyPage = () => {
   return (
     <>
@@ -25,10 +28,10 @@ const DeathValleyPage = () => {
           { text: 'Best Time to Visit: Fall, winter, and spring', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: "/images/deathvalley1.jpg" },
+          { src: "/images/deathvalley2.png"  },
+          { src: "/images/deathvalley3.png"  },
+          { src: "/images/deathvalley4.png"  }
         ]}
       />
       <MiniChatbox />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Divider, Card, CardContent, CardMedia, IconButton } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo, gallery }) => {
   const router = useRouter();
@@ -11,7 +12,7 @@ const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo
   };
 
   return (
-    <Box sx={{ maxWidth: 1200, margin: 'auto', padding: 4, bgcolor: '#ffffff', borderRadius: '8px', position: 'relative' }}>
+    <Box sx={{ maxWidth: 1200, margin: 'auto', padding: 4, bgcolor: '#f4e4c1', borderRadius: '8px', position: 'relative' }}>
       <IconButton
         onClick={handleBack}
         sx={{
@@ -38,7 +39,14 @@ const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo
       </Box>
 
       {/* Overview Section */}
-      <Box sx={{ mb: 6 }}>
+      <Box 
+        sx={{ 
+          mb: 6,
+          bgcolor: '#ffffff', // White background for the overview box
+          padding: 2, // Padding inside the box
+          borderRadius: '8px', // Rounded corners
+          boxShadow: 1, // Adds a subtle shadow for a boxed effect
+          }}>
         <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#3c3c3c', mb: 2 }}>
           Overview
         </Typography>
@@ -55,7 +63,7 @@ const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo
         <Grid container spacing={3}>
           {activities.map((activity, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card elevation={0} sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f5f5f5' }}>
+              <Card elevation={0} sx={{ display: 'flex', alignItems: 'center', bgcolor: '#bfb397' }}>
                 {activity.icon && (
                   <Box sx={{ p: 2, color: '#3c3c3c' }}>
                     {activity.icon}
@@ -82,7 +90,7 @@ const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo
         <Grid container spacing={3}>
           {visitorInfo.map((info, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card elevation={0} sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f5f5f5' }}>
+              <Card elevation={0} sx={{ display: 'flex', alignItems: 'center', bgcolor: '#bfb397' }}>
                 {info.icon && (
                   <Box sx={{ p: 2, color: '#3c3c3c' }}>
                     {info.icon}
@@ -114,15 +122,31 @@ const ParkTemplate = ({ parkName, description, overview, activities, visitorInfo
                   component="div"
                   sx={{
                     height: 200,
-                    bgcolor: '#f5f5f5',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    position: 'relative',
                   }}
                 >
-                  <Typography variant="body2" sx={{ color: '#999999' }}>
-                    {image.placeholderText}
-                  </Typography>
+                  {image.src ? (
+                    <Image
+                      src={image.src}
+                      alt={image.alt || `Gallery image ${index + 1}`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  ) : (
+                    <Box
+                      sx={{
+                        height: '100%',
+                        bgcolor: '#f5f5f5',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Typography variant="body2" sx={{ color: '#999999' }}>
+                        {image.placeholderText || 'Image placeholder'}
+                      </Typography>
+                    </Box>
+                  )}
                 </CardMedia>
               </Card>
             </Grid>

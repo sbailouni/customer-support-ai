@@ -25,10 +25,10 @@ const ChannelIslandsPage = () => {
           { text: 'Best Time to Visit: Spring and fall', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: "/images/channel1.png"  },
+          { src: "/images/channel2.png" },
+          { src: "/images/channel3.png" },
+          { src: "/images/channel4.png" }
         ]}
       />
       <MiniChatbox />

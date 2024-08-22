@@ -6,7 +6,7 @@ import MainChatbox from '../components/MainChatbox';
 
 export default function Home() {
   return (
-    <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', gap: 4 }}>
+    <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', gap: 4, backgroundColor: '#bfb397' }}>
       <ParksList />
       <MainChatbox />
     </Container>

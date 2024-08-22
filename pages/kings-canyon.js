@@ -25,10 +25,10 @@ const KingsCanyonPage = () => {
           { text: 'Best Time to Visit: Summer and fall', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/kings1.png' },
+          { src: '/images/kings2.png' },
+          { src: '/images/kings3.png' },
+          { src: '/images/kings4.png' }
         ]}
       />
       <MiniChatbox />

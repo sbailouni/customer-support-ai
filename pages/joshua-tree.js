@@ -25,10 +25,10 @@ const JoshuaTreePage = () => {
           { text: 'Best Time to Visit: Spring and fall', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/joshua1.png' },
+          { src: '/images/joshua2.png' },
+          { src: '/images/joshua3.png' },
+          { src: '/images/joshua4.png' }
         ]}
       />
       <MiniChatbox />

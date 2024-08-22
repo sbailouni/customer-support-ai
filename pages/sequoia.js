@@ -25,10 +25,10 @@ const SequoiaPage = () => {
           { text: 'Best Time to Visit: Summer and fall', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/seq1.png' },
+          { src: '/images/seq2.png' },
+          { src: '/images/seq3.png' },
+          { src: '/images/seq4.png' }
         ]}
       />
       <MiniChatbox />

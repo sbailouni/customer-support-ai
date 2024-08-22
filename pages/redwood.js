@@ -25,10 +25,10 @@ const RedwoodPage = () => {
           { text: 'Best Time to Visit: Summer and early fall', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/red1.png' },
+          { src: '/images/red2.png' },
+          { src: '/images/red3.png' },
+          { src: '/images/red4.png' }
         ]}
       />
       <MiniChatbox />

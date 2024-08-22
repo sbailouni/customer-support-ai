@@ -27,10 +27,10 @@ const LassenVolcanicPage = () => {
           { text: 'Best Time to Visit: Summer and early fall for hiking and accessibility', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/lassen1.png' },
+          { src: '/images/lassen2.png' },
+          { src: '/images/lassen3.png' },
+          { src: '/images/lassen4.png' }
         ]}
       />
       <MiniChatbox /> {/* Add MiniChatbox component here */}

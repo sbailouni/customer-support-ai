@@ -11,13 +11,15 @@ import HistoryIcon from '@mui/icons-material/History';
 import { useRouter } from 'next/router';
 
 const parks = [
-  { name: 'Yosemite National Park', path: '/yosemite' },
-  { name: 'Sequoia National Park', path: '/sequoia' },
-  { name: 'Kings Canyon National Park', path: '/kings-canyon' },
-  { name: 'Joshua Tree National Park', path: '/joshua-tree' },
-  { name: 'Redwood National and State Parks', path: '/redwood' },
   { name: 'Channel Islands National Park', path: '/channel-islands' },
   { name: 'Death Valley National Park', path: '/death-valley' },
+  { name: 'Joshua Tree National Park', path: '/joshua-tree' },
+  { name: 'Kings Canyon National Park', path: '/kings-canyon' },
+  { name: 'Lassen Volcanic National Park', path: '/lassen-volcanic' },
+  { name: 'Pinnacles National Park', path: '/pinnacles' },
+  { name: 'Redwood National and State Parks', path: '/redwood' },
+  { name: 'Sequoia National Park', path: '/sequoia' },
+  { name: 'Yosemite National Park', path: '/yosemite' }
 ];
 
 export default function ParksList() {

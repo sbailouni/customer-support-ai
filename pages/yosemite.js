@@ -26,10 +26,10 @@ const YosemitePage = () => {
           { text: 'Best Time to Visit: Spring and fall for milder weather, summer for peak season', icon: <HikingIcon /> }
         ]}
         gallery={[
-          { placeholderText: 'Image 1' },
-          { placeholderText: 'Image 2' },
-          { placeholderText: 'Image 3' },
-          { placeholderText: 'Image 4' }
+          { src: '/images/yo1.png' },
+          { src: '/images/yo2.png' },
+          { src: '/images/yo3.png' },
+          { src: '/images/yo4.png' }
         ]}
       />
       <MiniChatbox /> {/* Add MiniChatbox component here */}

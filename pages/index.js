@@ -7,10 +7,36 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useRouter } from 'next/router';
 
+import { auth, provider, signInWithPopup } from "../pages/firebase";
+import { GoogleAuthProvider } from "firebase/auth";
+
+
 export default function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
+
+  const signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user;
+      console.log("User Info: ", user);
+  
+      router.push('/home');
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.customData?.email;
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      console.error("Error signing in with Google: ", errorMessage);
+      if (email) {
+        console.error("Error with email:", email);
+      }
+    }
+  };
+  
 
   const handleAuth = async () => {
     // Temporarily redirect to dashboard without authentication
@@ -103,8 +129,8 @@ export default function Home() {
       <Box sx={{ mt: 2 }}>
         <Typography variant="body2" align="center" sx={{ color: '#5b4e4a' }}>
           Don&apos;t have an account?{' '}
-          <Button onClick={() => setIsSignup(!isSignup)} variant="text" color="inherit" sx={{ textTransform: 'none', color: '#5b4e4a' }}>
-            Sign up
+          <Button onClick={signInWithGoogle} variant="text" color="inherit" sx={{ textTransform: 'none', color: '#5b4e4a' }}>
+            Sign up with Google
           </Button>
         </Typography>
       </Box>

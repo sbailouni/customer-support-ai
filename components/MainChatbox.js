@@ -211,4 +211,5 @@ const MainChatbox = () => {
     </Box>
   );
 };
+
 export default MainChatbox;
